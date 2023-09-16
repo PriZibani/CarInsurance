@@ -13,18 +13,18 @@ class InsurancePolicy
         int get_pNr()const;
         string get_pHolder()const;
         double get_aRate()const;
-        //virtual void showPolicy (int pNr, string pHolder, double aRate);
-        void showPolicy(ostream & out)const;
+        virtual void showPolicy (int pNr, string pHolder, double aRate);
+
 
     private:
         int policyNr;
         string policyHolder;
         double annualRate;
 };
-/*void InsurancePolicy::showPolicy(int pNr, string pHolder, double aRate)
+void InsurancePolicy::showPolicy(int pNr, string pHolder, double aRate)
 {
     cout << this->get_pNr()<<this->get_pHolder() << this->get_aRate();
-}*/
+}
 // Default constructor
 InsurancePolicy::InsurancePolicy()
 {
@@ -79,7 +79,7 @@ class CarInsurance : public InsurancePolicy
         void showPolicy(int pNr, string pHolder, double aRate, double ex);
         void setPolicy(int pNr, string pHolder, double aRate, double ex);
         friend ostream& operator <<(ostream& os, const CarInsurance& carInsurance);
-        void showPolicy(ostream & out)const;
+        void showPolicy(int pNr, string pHolder, double aRate, double ex);
 
 };
 double CarInsurance::get_excess()
@@ -95,11 +95,11 @@ ostream& operator <<(ostream& os, const CarInsurance& carInsurance)
 {
     os<<"Excess : "<<carInsurance.excess<< endl;
 }
-/*void CarInsurance::showPolicy(int pNr, string pHolder, double aRate, double ex)
+void CarInsurance::showPolicy(int pNr, string pHolder, double aRate, double ex)
 {
     InsurancePolicy::showPolicy(pNr, pHolder, aRate);
     cout << this->get_excess() << endl;
-}*/
+}
 void CarInsurance::setPolicy(int pNr, string pHolder, double aRate, double ex)
 {
     InsurancePolicy::setPolicy(pNr,pHolder,aRate);
