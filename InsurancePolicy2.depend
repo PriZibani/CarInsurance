@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1694934395 source:c:\users\user\documents\unisa\cos1512\assignment 4\insurancepolicy2\carinsurance.cpp
+	"CarInsurance.h"
+	<iostream>
+
+1694934332 c:\users\user\documents\unisa\cos1512\assignment 4\insurancepolicy2\carinsurance.h
+	"InsurancePolicy.h"
+
+1694934567 c:\users\user\documents\unisa\cos1512\assignment 4\insurancepolicy2\insurancepolicy.h
+	<string>
+	<iostream>
+
+1694934611 source:c:\users\user\documents\unisa\cos1512\assignment 4\insurancepolicy2\insurancepolicy.cpp
+	"InsurancePolicy.h"
+
+1694934438 source:c:\users\user\documents\unisa\cos1512\assignment 4\insurancepolicy2\main.cpp
+	<iostream>
+	"CarInsurance.h"
+
